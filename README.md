@@ -18,7 +18,7 @@ A site designed for tracking social links in Persona 4 Golden!
 
 ## Running
 
-1. TODO: add run steps if necessary, otherwise remove this section
+1. Run the dev server with `npm run dev`. Open the page by clicking the resulting localhost link.
 
 <!-- IDEA: When this is expanded further add a table of contents that links to each subsection. -->
 <!-- IDEA:  Add those headers for projects with the fancy lil buttons perhaps-->
