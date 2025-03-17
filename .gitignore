@@ -3,3 +3,7 @@
 
 # Exclude Node.js modules
 node_modules/
+
+# Ignore build output folders
+/dist
+/build
