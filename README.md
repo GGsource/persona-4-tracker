@@ -16,12 +16,6 @@ A site designed for tracking social links in Persona 4 Golden!
 
 ---
 
-## Configuration
-
-1. TODO: add configuration steps if necessary, otherwise remove this section
-
----
-
 ## Running
 
 1. TODO: add run steps if necessary, otherwise remove this section
