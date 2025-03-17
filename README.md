@@ -12,7 +12,7 @@ A site designed for tracking social links in Persona 4 Golden!
     1. Initialize the repo via `npm init -y`.
     1. Add **Vite**, our build tool of choice, via `npm install vite --save-dev`.
     1. Add **Typescript**, the language we will be coding with, via `npm install typescript --save-dev`.
-1. If this is first time running project, do `npm install` to download required modules. After this you should have a folder `node_modules`.
+    1. Do `npm install` to download required modules. After this you should have a folder `node_modules`.
 
 ---
 
