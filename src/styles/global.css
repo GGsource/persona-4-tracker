@@ -1,0 +1,10 @@
+.linkContainer {
+    border: 3px solid green;
+}
+.linkFull {
+    height: 50px;
+    width: 100%;
+    /* Give it a red border and make inside semitransluscent red striped background */
+    background: repeating-linear-gradient(45deg, red, red 10px, rgba(255, 0, 0, 0.5) 10px, rgba(255, 0, 0, 0.5) 20px);
+    border: 1px solid red;
+}
