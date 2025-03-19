@@ -1,5 +1,3 @@
-import { SocialLinkData } from "./SocialLinkData";
-
 // SocialLinkUI Class that represents a Social Link UI element
 export class SocialLinkUI {
     // Contains the state of only the information that can be changed
