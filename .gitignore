@@ -1,5 +1,5 @@
 # Exclude local VSCode settings 
-/.vscode
+.vscode/settings.json
 
 # Exclude Node.js modules
 node_modules/

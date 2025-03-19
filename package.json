@@ -4,7 +4,7 @@
     "description": "A site designed for tracking social links in Persona 4 Golden!",
     "main": "index.js",
     "scripts": {
-        "dev": "vite",
+        "dev": "vite --open",
         "build": "vite build",
         "preview": "vite preview"
     },
