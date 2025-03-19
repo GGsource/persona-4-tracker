@@ -1,5 +1,5 @@
 import { SocialLinkData } from "./SocialLinkData";
-import { LinkContainer } from "./SociaLinkUI";
+import { SocialLinkUI } from "./SociaLinkUI";
 
 // Initial Social Link Information stored in an Object
 let linkData: SocialLinkData[] = [
@@ -34,6 +34,11 @@ let linkData: SocialLinkData[] = [
 const UIBody = document.getElementById("UIBody");
 
 if (UIBody) {
-    let linkContainer = new LinkContainer(linkData);
-    UIBody.appendChild(linkContainer.getUI());
+    let linkContainer: HTMLDivElement = document.createElement("div");
+    linkData.forEach((element) => {
+        // Make the new SocialLinkUI object from the data
+        let newLink = new SocialLinkUI(element.arcana, element.name, element.rank, element.hidden);
+        linkContainer.appendChild(newLink.getUI());
+    });
+    UIBody.appendChild(linkContainer);
 }
