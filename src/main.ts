@@ -31,14 +31,13 @@ let linkData: SocialLinkData[] = [
 ];
 
 // Get the app element
-const UIBody = document.getElementById("UIBody");
+const linkContainer = document.getElementById("linkContainer");
 
-if (UIBody) {
-    let linkContainer: HTMLDivElement = document.createElement("div");
+if (linkContainer) {
     linkData.forEach((element) => {
         // Make the new SocialLinkUI object from the data
         let newLink = new SocialLinkUI(element.arcana, element.name, element.rank, element.hidden);
         linkContainer.appendChild(newLink.getUI());
     });
-    UIBody.appendChild(linkContainer);
+    linkContainer.appendChild(linkContainer);
 }
