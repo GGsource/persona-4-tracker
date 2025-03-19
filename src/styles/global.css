@@ -14,3 +14,30 @@
     );
     border: 1px solid red;
 }
+
+/* content that is displayed when screen width is above 1080px */
+@media (min-width: 1080px) {
+    /* warning: extreme vibe-based positioning */
+    #hero {
+        position: absolute;
+        top: 22vh;
+        left: 60%;
+        width: 40vw;
+        z-index: 2
+    }
+    #hero-shadow {
+        position: absolute;
+        top: 27vh;
+        left: 57%;
+        width: 40vw;
+        overflow: hidden;
+        z-index: 1
+    }
+}
+
+/* hide content */
+@media (max-width: 1080px) {
+    #hero, #hero-shadow {
+        display: none; /* Hide elements completely */
+    }
+}
