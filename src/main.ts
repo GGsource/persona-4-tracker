@@ -39,5 +39,4 @@ if (linkContainer) {
         let newLink = new SocialLinkUI(element.arcana, element.name, element.rank, element.hidden);
         linkContainer.appendChild(newLink.getUI());
     });
-    linkContainer.appendChild(linkContainer);
 }
