@@ -6,21 +6,41 @@ body {
     overflow: hidden;
 }
 
+/* Social Link rows section  */
 .linkContainer {
     border: 3px solid green;
 }
 .linkFull {
     height: var(--linkSize);
     width: 100%;
-    /* DEBUGGING: to make visible */
+    /* DEBUGGING: to be visible prior to any actual styling */
     background: repeating-linear-gradient(
         45deg,
-        rgba(255, 0, 0, 0.2),
+        rgba(255, 0, 0, 0.1),
+        rgba(255, 0, 0, 0.2) 10px,
         rgba(255, 0, 0, 0.3) 10px,
-        rgba(255, 0, 0, 0.4) 10px,
-        rgba(255, 0, 0, 0.5) 20px
+        rgba(255, 0, 0, 0.4) 20px
     );
     border: 1px solid red;
+    display: flex; /* Makes child divs be lined one after the other */
+    padding-right: 40%; /* Space for the right side of the screen to not overlap w/ bust*/
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+.linkSection {
+    /* DEBUGGING: Green striped transluscent */
+    background: repeating-linear-gradient(
+        60deg,
+        rgba(0, 255, 0, 0.1),
+        rgba(0, 255, 0, 0.2) 10px,
+        rgba(0, 255, 0, 0.3) 10px,
+        rgba(0, 255, 0, 0.4) 20px
+    );
+    border: 1px solid green;
+    height: 100%; /* Full height of parent div */
+    flex: 1; /* Makes child divs take up equal space */
+    /* Set the font to p4 in green */
+    font: 1.5em "P4", sans-serif;
+    color: green;
 }
 
 #headerContainer {

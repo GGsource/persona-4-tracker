@@ -15,12 +15,15 @@ export class SocialLinkUI {
         linkUIFull.className = "linkFull";
         let linkUILeft = document.createElement("div");
         linkUILeft.className = "linkSection linkLeft";
+        linkUILeft.innerHTML = "Area for the arcana card";
         // TODO: Turn linkleft into the full card using multiple divs
         let linkCenter = document.createElement("div");
         linkCenter.className = "linkSection linkCenter";
+        linkCenter.innerHTML = "Area for the level and arcana name";
         // TODO: Insert the rank and the arcana below it inside linkCenter
         let linkUIRight = document.createElement("div");
         linkUIRight.className = "linkSection linkRight";
+        linkUIRight.innerHTML = "Area for the bar and the name of the social link";
         // TODO: Insert the pip bar and the name of the social link inside linkRight
 
         // Attach all three sections to the full card
