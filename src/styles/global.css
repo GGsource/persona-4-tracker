@@ -89,11 +89,51 @@ body {
 
 #headerContainer {
     color: darkslategrey;
+    height: 20vh;
     font-size: 5em;
     font-family: "P4";
     background-color: yellowgreen;
-    display: flex;
-    justify-content: right;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    position: relative;
+}
+#headerStripes {
+    width: 100%;
+    height: 100%;
+    border: orangered solid 3px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#headerBody {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Start at the horizontal center of the parent */
+    transform: translateX(-50%); /* Adjust to center */
+    height: 100%; /* Full height of parent div */
+    width: 100vw;
+    max-width: calc((16 / 9) * 100vh);
+    border: teal solid 3px;
+    background-color: aqua;
+    box-sizing: border-box;
+}
+#headerTitle {
+    border: orchid solid 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#headerStar {
+    position: absolute;
+    /* Set at 0 with accounting for the center of the image */
+    top: -22px;
+    right: -16px;
+    /* transform: translate(50%, -50%); */
+    max-width: calc(16 / 9 * 14vh);
+    animation: spin 11s linear infinite;
+    filter: drop-shadow(-1.5vw 2vh #ffa300);
+
+    border: #ffa300 solid 3px;
 }
 
 /* content that is displayed when screen width is above 1080px */
@@ -107,16 +147,6 @@ body {
         width: 53vw;
         height: 93vh;
         filter: drop-shadow(-3vw 6vh #252525);
-    }
-    #star {
-        position: absolute;
-        max-width: calc(16 / 9 * 14vh);
-        margin: -16px -10px 0px 0px; /* top right bottom left*/
-        /* animation-name: spin; */
-        animation-duration: 11s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        /* filter: drop-shadow(-1.5vw 2vh #ffa300); */
     }
 }
 
@@ -136,7 +166,7 @@ body {
 /* hide content */
 @media (max-width: 1080px) {
     #hero,
-    #star {
+    #headerStar {
         display: none; /* Hide elements completely */
     }
 }
