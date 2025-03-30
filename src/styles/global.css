@@ -78,18 +78,11 @@ body {
     /* TODO: Look into setting these as relative positionings to screen size, as we are no doubt looking at different placements due to resolution */
     #hero {
         position: absolute;
-        top: 13vh;
-        left: 57%;
-        width: 50.5vw;
+        bottom: -8.5vh;
+        right: -9vw;
+        width: 53vw;
+        height: 93vh;
         filter: drop-shadow(-3vw 6vh #252525);
-    }
-    #hero-shadow {
-        position: absolute;
-        top: 27vh;
-        left: 62%;
-        width: 40vw;
-        overflow: hidden;
-        z-index: 1;
     }
     #star {
         position: absolute;
@@ -98,7 +91,7 @@ body {
         width: 13vw;
         overflow: hidden;
         animation-name: spin;
-        animation-duration: 11000ms;
+        animation-duration: 11s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         filter: drop-shadow(-1.5vw 2vh #ffa300);
