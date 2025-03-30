@@ -7,5 +7,6 @@
 }
 
 :root {
-    --linkSize: 80px; /* The standard height for each link row */
+    --linkSize: 150px; /* The standard height for each link row */
+    /* TODO: Adapt the size of the rows to screen resolution or at least to be relative to protag bust image for consistency */
 }
