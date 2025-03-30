@@ -1,10 +1,17 @@
+/* Include the palette file */
+@import url("palette.css");
+
+body {
+    background-color: antiquewhite; /* Temporary BG */
+}
+
 .linkContainer {
     border: 3px solid green;
 }
 .linkFull {
-    height: 50px;
+    height: var(--linkSize);
     width: 100%;
-    /* Give it a red border and make inside semitransluscent red striped background */
+    /* DEBUGGING: to make visible */
     background: repeating-linear-gradient(
         45deg,
         rgba(255, 0, 0, 0.2),
@@ -15,6 +22,12 @@
     border: 1px solid red;
 }
 
+#headerContainer {
+    color: brown;
+    font-size: 5em;
+    font-family: "P4";
+}
+
 /* content that is displayed when screen width is above 1080px */
 @media (min-width: 1080px) {
     /* warning: extreme vibe-based positioning */
@@ -23,7 +36,7 @@
         top: 22vh;
         left: 60%;
         width: 40vw;
-        z-index: 2
+        z-index: 2;
     }
     #hero-shadow {
         position: absolute;
@@ -31,13 +44,14 @@
         left: 57%;
         width: 40vw;
         overflow: hidden;
-        z-index: 1
+        z-index: 1;
     }
 }
 
 /* hide content */
 @media (max-width: 1080px) {
-    #hero, #hero-shadow {
+    #hero,
+    #hero-shadow {
         display: none; /* Hide elements completely */
     }
 }

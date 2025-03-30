@@ -1,0 +1,11 @@
+/* File for variables that will see common reuse */
+@font-face {
+    font-family: "P4";
+    src: url("../assets/fonts/Fontsona4Golden.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --linkSize: 80px; /* The standard height for each link row */
+}
