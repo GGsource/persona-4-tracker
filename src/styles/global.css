@@ -4,6 +4,7 @@
 body {
     background-color: slategrey; /* Temporary BG */
     overflow: hidden;
+    margin: 0; /* Remove default margin */
 }
 
 /* Social Link rows section  */
