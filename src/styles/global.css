@@ -2,7 +2,7 @@
 @import url("palette.css");
 
 body {
-    background-color: antiquewhite; /* Temporary BG */
+    background-color: slategrey; /* Temporary BG */
     overflow: hidden;
 }
 
@@ -14,6 +14,7 @@ body {
     flex-direction: column; /* Makes child divs be lined one after the other */
     /* Add gap between children */
     gap: 0.5vh; /* Space between the rows */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 
     /* DEBUGGING: bleu */
     background: repeating-linear-gradient(
@@ -27,6 +28,25 @@ body {
 .linkFull {
     height: var(--linkSize);
     width: 100%;
+
+    /* DEBUGGING: to be visible prior to any actual styling */
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 0, 0, 0),
+        rgba(255, 0, 0, 0) 10px,
+        rgba(255, 255, 0, 0.2) 10px,
+        rgba(255, 255, 0, 0.2) 20px
+    );
+    border: 1px solid yellow;
+    /* Center hcildren */
+    display: flex; /* Makes child divs be lined one after the other */
+    justify-content: center; /* Center children horizontally */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+.linkBody {
+    height: 100%; /* Full height of parent div */
+    width: 100vw; /* Full width of parent div */
+    max-width: calc((16 / 9) * 100vh);
     display: flex; /* Makes child divs be lined one after the other */
     padding-right: 40%; /* Space for the right side of the screen to not overlap w/ bust*/
     padding-left: 2%; /* Space for the left side's indent*/
@@ -34,7 +54,7 @@ body {
 
     /* DEBUGGING: to be visible prior to any actual styling */
     background: repeating-linear-gradient(
-        45deg,
+        60deg,
         rgba(255, 0, 0, 0),
         rgba(255, 0, 0, 0) 10px,
         rgba(255, 0, 0, 0.2) 10px,
@@ -57,7 +77,7 @@ body {
 
     /* DEBUGGING: Green striped transluscent */
     background: repeating-linear-gradient(
-        60deg,
+        75deg,
         rgba(0, 255, 0, 0),
         rgba(0, 255, 0, 0) 10px,
         rgba(0, 255, 0, 0.3) 10px,
@@ -67,9 +87,12 @@ body {
 }
 
 #headerContainer {
-    color: brown;
+    color: darkslategrey;
     font-size: 5em;
     font-family: "P4";
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: right;
 }
 
 /* content that is displayed when screen width is above 1080px */
@@ -86,25 +109,24 @@ body {
     }
     #star {
         position: absolute;
-        top: -2vh;
-        left: 88%;
-        width: 13vw;
-        overflow: hidden;
-        animation-name: spin;
+        max-width: calc(16 / 9 * 14vh);
+        margin: -16px -10px 0px 0px; /* top right bottom left*/
+        /* animation-name: spin; */
         animation-duration: 11s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        filter: drop-shadow(-1.5vw 2vh #ffa300);
+        /* filter: drop-shadow(-1.5vw 2vh #ffa300); */
     }
 }
 
 /* ingame screenshot overlaid on top of website */
 #debug {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw; /* Full width */
-    height: 100vh; /* Full height */
+    bottom: 0; /* Anchor to the bottom of the page */
+    left: 50%; /* Start at the center horizontally */
+    transform: translateX(-50%); /* Adjust to center */
+    max-width: calc((16 / 9) * 100vh); /* Full width */
+    max-height: calc((9 / 16) * 100vw); /* Full height */
     pointer-events: none;
     opacity: 0.2;
     z-index: 9999;

@@ -13,6 +13,8 @@ export class SocialLinkUI {
         // Now we can create the HTML elements
         let linkUIFull = document.createElement("div");
         linkUIFull.className = "linkFull";
+        let linkUIBody = document.createElement("div");
+        linkUIBody.className = "linkBody";
         let linkUILeft = document.createElement("div");
         linkUILeft.className = "linkSection linkLeft";
         linkUILeft.innerHTML = "Area for the arcana card";
@@ -31,10 +33,12 @@ export class SocialLinkUI {
 
         // TODO: Figure out how the color of the line between each link row is decided in original
 
-        // Attach all three sections to the full card
-        linkUIFull.appendChild(linkUILeft);
-        linkUIFull.appendChild(linkCenter);
-        linkUIFull.appendChild(linkUIRight);
+        // Attach all three sections to the body of the row
+        linkUIBody.appendChild(linkUILeft);
+        linkUIBody.appendChild(linkCenter);
+        linkUIBody.appendChild(linkUIRight);
+        // Attach the body to the full row
+        linkUIFull.appendChild(linkUIBody);
 
         // Attach the UI we've created to the class
         this.linkUI = linkUIFull;
