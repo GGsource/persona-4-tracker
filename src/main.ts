@@ -40,3 +40,9 @@ if (linkContainer) {
         linkContainer.appendChild(newLink.getUI());
     });
 }
+
+// Get the viewport dimensions and print them out
+const debugDescription = document.getElementById("debugDesc");
+if (debugDescription) {
+    debugDescription.innerHTML = `Viewport width: ${window.innerWidth}, height: ${window.innerHeight}`;
+}

@@ -181,7 +181,6 @@ body {
     -o-appearance: none;
     appearance: none;
 }
-
 #debugCheckBox:hover,
 #debugCheckBox:active {
     opacity: 1; /* Fully visible when hovered or clicked */
@@ -195,6 +194,12 @@ body {
 
 #debugCheckBox:checked ~ #debugImage {
     display: block; /* Show the image when the checkbox is checked */
+}
+#debugDesc {
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    z-index: 9999;
 }
 
 /* hide content */
