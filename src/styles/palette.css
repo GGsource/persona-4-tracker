@@ -7,9 +7,10 @@
 }
 
 :root {
-    --linkSize: 13vh; /* The standard height for each link row */
+    --linkSize: 13; /* The standard height for each link row */
     /* TODO: Adapt the size of the rows to screen resolution or at least to be relative to protag bust image for consistency */
-
+    --ratio: 16 / 9; /* The ratio of the screen width to height */
+    --inverseRatio: 9 / 16; /* The ratio of the screen height to width */
     --starYellow: #fdfe7e;
     --starOrange: #ffa300;
 }
