@@ -7,6 +7,9 @@
 }
 
 :root {
-    --linkSize: 150px; /* The standard height for each link row */
+    --linkSize: 13vh; /* The standard height for each link row */
     /* TODO: Adapt the size of the rows to screen resolution or at least to be relative to protag bust image for consistency */
+
+    --starYellow: #fdfe7e;
+    --starOrange: #ffa300;
 }

@@ -121,7 +121,7 @@ body {
     border: orchid solid 3px;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 20vw;
 }
 #headerStar {
     position: absolute;
@@ -131,9 +131,9 @@ body {
     /* transform: translate(50%, -50%); */
     max-width: calc(16 / 9 * 14vh);
     animation: spin 11s linear infinite;
-    filter: drop-shadow(-1.5vw 2vh #ffa300);
+    filter: drop-shadow(-1.5vw 2vh var(--starOrange));
 
-    border: #ffa300 solid 3px;
+    border: var(--starOrange) solid 3px;
 }
 
 /* content that is displayed when screen width is above 1080px */
@@ -150,8 +150,9 @@ body {
     }
 }
 
+/* DEBUGGING: */
 /* ingame screenshot overlaid on top of website */
-#debug {
+#debugImage {
     position: absolute;
     bottom: 0; /* Anchor to the bottom of the page */
     left: 50%; /* Start at the center horizontally */
@@ -160,7 +161,40 @@ body {
     max-height: calc((9 / 16) * 100vw); /* Full height */
     pointer-events: none;
     opacity: 0.2;
+    z-index: 9998;
+    display: none; /* Initially hidden */
+}
+#debugCheckBox {
+    position: absolute;
+    top: 1%;
+    left: 1%;
     z-index: 9999;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    border: 3px solid var(--starOrange);
+    cursor: pointer;
+    opacity: 0.3; /* Initially hidden */
+    transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transition for visibility and background color */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+#debugCheckBox:hover,
+#debugCheckBox:active {
+    opacity: 1; /* Fully visible when hovered or clicked */
+    background-color: var(--starYellow); /* Accent color for the checkbox */
+}
+
+#debugCheckBox:checked {
+    background-color: var(--starOrange); /* Fill background with starOrange when checked */
+    opacity: 1; /* Fully visible when checked */
+}
+
+#debugCheckBox:checked ~ #debugImage {
+    display: block; /* Show the image when the checkbox is checked */
 }
 
 /* hide content */
