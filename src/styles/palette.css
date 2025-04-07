@@ -13,4 +13,6 @@
     --inverseRatio: 9 / 16; /* The ratio of the screen height to width */
     --starYellow: #fdfe7e;
     --starOrange: #ffa300;
+    --softBlack: #252525; /* Used for shadow and highlighted link */
+    --boldOrange: #f67b00; /* Used for linkCenter and linkRight */
 }
