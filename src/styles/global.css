@@ -133,23 +133,37 @@ body {
     /* transform: translate(50%, -50%); */
     width: calc(var(--ratio) * 14vh);
     max-width: 14vw;
+    max-height: calc(var(--inverseRatio) * 100vw);
     animation: spin 11s linear infinite;
     filter: drop-shadow(-1.5vw 2vh var(--starOrange));
 
     border: var(--starOrange) solid 3px;
 }
 
-/* content that is displayed when screen width is above 1080px */
-@media (min-width: 1080px) {
-    /* warning: extreme vibe-based positioning */
+#bodyContainer {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Start at the horizontal center of the parent */
+    transform: translateX(-50%); /* Adjust to center */
+    height: 100%; /* Full height of parent div */
+    width: 100vw;
+    max-width: calc(var(--ratio) * 100vh);
+    border: purple solid 3px;
+    box-sizing: border-box;
+}
+
+/* only displays on large viewports */
+@media (min-width: 800px) {
     /* TODO: Look into setting these as relative positionings to screen size, as we are no doubt looking at different placements due to resolution */
+    /* TODO: is aligning these sprites correctly a good use of time? */
     #hero {
         position: absolute;
-        bottom: -8.5vh;
-        right: -9vw;
-        width: 53vw;
+        bottom: -9.8vh;
+        right: -8.2vw;
+        max-width: calc(var(--ratio) * 53vh);
         height: 93vh;
-        filter: drop-shadow(-3vw 6vh #252525);
+        max-height: calc(var(--inverseRatio) * 100vw);
+        filter: drop-shadow(-3vw 6vh var(--softBlack));
     }
 }
 
