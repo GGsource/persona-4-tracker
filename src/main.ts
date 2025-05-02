@@ -30,6 +30,28 @@ let linkData: SocialLinkData[] = [
     { arcana: "Aeon", name: "Marie", rank: 1, hidden: true },
 ];
 
+// gets cookies' values when you feed the cookie's name (key)
+// will be used to get the values of the social links, mute button and the debug image
+function getCookie(cname: string) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+
+    // for cook in cookies
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+}
+
 // Get the app element
 const linkContainer = document.getElementById("linkContainer");
 
@@ -43,20 +65,20 @@ if (linkContainer) {
 
 // has to start as true because browser autoplay restrictions are a thing
 let mute = true; 
-
 const muteButton = document.getElementById("muteButton");
+
 if (muteButton) {
     muteButton.addEventListener("click", () => {
-        mute = !mute; // Toggle the mute state
+        mute = !mute;
     });
 }
 
-// Gets all the elements with the *class* "linkBody" and adds a mouseover event listener to each of them
+// gets all the elements with the *class* "linkBody" and adds a mouseover event listener to each of them
 const allLinkBody = document.querySelectorAll(".linkBody");
 
     allLinkBody.forEach(linkBody => {
     linkBody.addEventListener("mouseover", () => {
-        // to say that this is not best practice is undermining it, allocates RAM and so depends on unruly GC to clean up. but it mimics the game's behavior
+        // to say that this is not best practice is undermining it, allocates RAM per hover therefore depending on unruly GC to clean up. but it mimics the game's behavior
         if (!mute) {
             const hoversfx = new Audio('src/assets/sfx/optionselect.mp3');
             hoversfx.play();
