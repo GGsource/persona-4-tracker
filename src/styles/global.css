@@ -9,12 +9,14 @@ body {
 
 /* Social Link rows section  */
 #linkContainer {
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     /* TODO: Limit the height of this as appropriate to enforce scrollbar usage */
     display: flex; /* Makes child divs be lined one after the other */
-    flex-direction: column; /* Makes child divs be lined one after the other */
+    flex-direction: column;
+    /* height: 100%;
+    overflow-y: scroll; */
     /* Add gap between children */
-    gap: 0.5vh; /* Space between the rows */
+    gap: 0.5%;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 
     /* DEBUGGING: bleu */
@@ -28,18 +30,18 @@ body {
 }
 .linkFull {
     height: calc(var(--linkSize) * 1vh);
-    max-height: calc(100vw * (9 / 16) * (var(--linkSize) / 100)); /* 13% of the screen height @ 16:9 */
+    max-height: calc(100vw * (9 / 16) * (var(--linkSize) / 100));
     width: 100%;
 
     /* DEBUGGING: to be visible prior to any actual styling */
-    background: repeating-linear-gradient(
+    /* background: repeating-linear-gradient(
         45deg,
         rgba(255, 0, 0, 0),
         rgba(255, 0, 0, 0) 10px,
         rgba(255, 255, 0, 0.2) 10px,
         rgba(255, 255, 0, 0.2) 20px
     );
-    border: 1px solid yellow;
+    border: 1px solid yellow; */
     /* Center hcildren */
     display: flex; /* Makes child divs be lined one after the other */
     justify-content: center; /* Center children horizontally */
@@ -47,32 +49,37 @@ body {
 }
 .linkBody {
     height: 100%; /* Full height of parent div */
-    width: 100vw; /* Full width of parent div */
+    width: 100%;
     max-width: calc((var(--ratio)) * 100vh);
     display: flex; /* Makes child divs be lined one after the other */
-    padding-right: 40%; /* Space for the right side of the screen to not overlap w/ bust*/
-    padding-left: 2%; /* Space for the left side's indent*/
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 
     /* DEBUGGING: to be visible prior to any actual styling */
-    background: repeating-linear-gradient(
+    /* background: repeating-linear-gradient(
         60deg,
         rgba(255, 0, 0, 0),
         rgba(255, 0, 0, 0) 10px,
         rgba(255, 0, 0, 0.2) 10px,
         rgba(255, 0, 0, 0.2) 20px
     );
-    border: 1px solid red;
+    border: 1px solid red; */
 }
+/* Space between the first and second link sections */
 .linkSection:nth-child(1) {
-    margin-right: 1%; /* Space between the first and second link sections */
+    /* Top Right Bottom Left */
+    margin: 0 0.88% 0 2.55%;
+    /* margin-right: 1.5%; */
 }
+/* Space between the second and third link sections */
 .linkSection:nth-child(2) {
-    margin-right: 0.25%; /* Space between the second and third link sections */
+    margin-right: 0.15%;
+}
+.linkSection:last-child {
+    margin-right: 39.84%;
 }
 .linkSection {
     height: 100%; /* Full height of parent div */
-    flex: 1; /* Makes child divs take up equal space */
+    width: 100%;
     font: 1em "P4", sans-serif;
     color: green;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
@@ -81,9 +88,9 @@ body {
     background: repeating-linear-gradient(
         75deg,
         rgba(0, 255, 0, 0),
-        rgba(0, 255, 0, 0) 10px,
-        rgba(0, 255, 0, 0.3) 10px,
-        rgba(0, 255, 0, 0.3) 15px
+        rgba(0, 255, 0, 0) 1px,
+        rgba(0, 255, 0, 0.3) 2px,
+        rgba(0, 255, 0, 0.3) 3px
     );
     border: 1px solid green;
 }
@@ -101,7 +108,7 @@ body {
 #headerStripes {
     width: 100%;
     height: 100%;
-    border: orangered solid 3px;
+    /* border: orangered solid 3px; */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     position: absolute;
     top: 0;
@@ -115,8 +122,8 @@ body {
     height: 100%; /* Full height of parent div */
     width: 100vw;
     max-width: calc(var(--ratio) * 100vh);
-    border: teal solid 3px;
-    background-color: aqua;
+    /* border: teal solid 3px; */
+    /* background-color: aqua; */
     box-sizing: border-box;
 }
 #headerTitle {
@@ -150,6 +157,7 @@ body {
     max-width: calc(var(--ratio) * 100vh);
     border: purple solid 3px;
     box-sizing: border-box;
+    z-index: -1;
 }
 
 /* only displays on large viewports */
