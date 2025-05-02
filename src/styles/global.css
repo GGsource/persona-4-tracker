@@ -157,7 +157,7 @@ body {
     max-width: calc(var(--ratio) * 100vh);
     border: purple solid 3px;
     box-sizing: border-box;
-    z-index: -1;
+    pointer-events: none;
 }
 
 /* only displays on large viewports */
@@ -225,33 +225,6 @@ body {
     top: 1%;
     left: 5%;
     z-index: 9999;
-}
-#muteButton {
-    position: absolute;
-    top: 5%;
-    left: 1%;
-    z-index: 9999;
-    border-radius: 50%;
-    width: 2em;
-    height: 2em;
-    border: 3px solid olivedrab;
-    cursor: pointer;
-    opacity: 0.3; /* Initially hidden */
-    transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transition for visibility and background color */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-}
-#muteButton:hover,
-#muteButton:active {
-    opacity: 1; /* Fully visible when hovered or clicked */
-    background-color: olive; /* Accent color for the checkbox */
-}
-
-#muteButton:checked {
-    background-color: olivedrab; /* Fill background with starOrange when checked */
-    opacity: 1; /* Fully visible when checked */
 }
 
 /* hide content */
