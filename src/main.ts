@@ -41,6 +41,30 @@ if (linkContainer) {
     });
 }
 
+// has to start as true because browser autoplay restrictions are a thing
+let mute = true; 
+
+const muteButton = document.getElementById("muteButton");
+if (muteButton) {
+    muteButton.addEventListener("click", () => {
+        mute = !mute; // Toggle the mute state
+    });
+}
+
+// Gets all the elements with the *class* "linkBody" and adds a mouseover event listener to each of them
+const allLinkBody = document.querySelectorAll(".linkBody");
+
+    allLinkBody.forEach(linkBody => {
+    linkBody.addEventListener("mouseover", () => {
+        // to say that this is not best practice is undermining it, allocates RAM and so depends on unruly GC to clean up. but it mimics the game's behavior
+        if (!mute) {
+            const hoversfx = new Audio('src/assets/sfx/optionselect.mp3');
+            hoversfx.play();
+        }
+    });
+});
+
+
 // Get the viewport dimensions and print them out
 const debugDescription = document.getElementById("debugDesc");
 if (debugDescription) {
