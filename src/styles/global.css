@@ -2,39 +2,39 @@
 @import url("palette.css");
 
 body {
-    background-color: slategrey; /* Temporary BG */
-    overflow: hidden;
-    margin: 0; /* Remove default margin */
+	background-color: slategrey; /* Temporary BG */
+	overflow: hidden;
+	margin: 0; /* Remove default margin */
 }
 
 /* Social Link rows section  */
 #linkContainer {
-    /* border: 3px solid blue; */
-    /* TODO: Limit the height of this as appropriate to enforce scrollbar usage */
-    display: flex; /* Makes child divs be lined one after the other */
-    flex-direction: column;
-    /* height: 100%;
+	/* border: 3px solid blue; */
+	/* TODO: Limit the height of this as appropriate to enforce scrollbar usage */
+	display: flex; /* Makes child divs be lined one after the other */
+	flex-direction: column;
+	/* height: 100%;
     overflow-y: scroll; */
-    /* Add gap between children */
-    gap: 0.5%;
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+	/* Add gap between children */
+	gap: 0.5%;
+	box-sizing: border-box; /* Include padding and border in element's total width and height */
 
-    /* DEBUGGING: bleu */
-    background: repeating-linear-gradient(
-        30deg,
-        rgba(0, 0, 255, 0),
-        rgba(0, 0, 255, 0) 10px,
-        rgba(0, 0, 255, 0.1) 10px,
-        rgba(0, 0, 255, 0.1) 30px
-    );
+	/* DEBUGGING: bleu */
+	background: repeating-linear-gradient(
+		30deg,
+		rgba(0, 0, 255, 0),
+		rgba(0, 0, 255, 0) 10px,
+		rgba(0, 0, 255, 0.1) 10px,
+		rgba(0, 0, 255, 0.1) 30px
+	);
 }
 .linkFull {
-    height: calc(var(--linkSize) * 1vh);
-    max-height: calc(100vw * (9 / 16) * (var(--linkSize) / 100));
-    width: 100%;
+	height: calc(var(--linkSize) * 1vh);
+	max-height: calc(100vw * (9 / 16) * (var(--linkSize) / 100));
+	width: 100%;
 
-    /* DEBUGGING: to be visible prior to any actual styling */
-    /* background: repeating-linear-gradient(
+	/* DEBUGGING: to be visible prior to any actual styling */
+	/* background: repeating-linear-gradient(
         45deg,
         rgba(255, 0, 0, 0),
         rgba(255, 0, 0, 0) 10px,
@@ -42,20 +42,20 @@ body {
         rgba(255, 255, 0, 0.2) 20px
     );
     border: 1px solid yellow; */
-    /* Center hcildren */
-    display: flex; /* Makes child divs be lined one after the other */
-    justify-content: center; /* Center children horizontally */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+	/* Center hcildren */
+	display: flex; /* Makes child divs be lined one after the other */
+	justify-content: center; /* Center children horizontally */
+	box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 .linkBody {
-    height: 100%; /* Full height of parent div */
-    width: 100%;
-    max-width: calc((var(--ratio)) * 100vh);
-    display: flex; /* Makes child divs be lined one after the other */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+	height: 100%; /* Full height of parent div */
+	width: 100%;
+	max-width: calc((var(--ratio)) * 100vh);
+	display: flex; /* Makes child divs be lined one after the other */
+	box-sizing: border-box; /* Include padding and border in element's total width and height */
 
-    /* DEBUGGING: to be visible prior to any actual styling */
-    /* background: repeating-linear-gradient(
+	/* DEBUGGING: to be visible prior to any actual styling */
+	/* background: repeating-linear-gradient(
         60deg,
         rgba(255, 0, 0, 0),
         rgba(255, 0, 0, 0) 10px,
@@ -66,165 +66,165 @@ body {
 }
 /* Space between the first and second link sections */
 .linkSection:nth-child(1) {
-    /* Top Right Bottom Left */
-    margin: 0 0.88% 0 2.55%;
-    /* margin-right: 1.5%; */
+	/* Top Right Bottom Left */
+	margin: 0 0.88% 0 2.55%;
+	/* margin-right: 1.5%; */
 }
 /* Space between the second and third link sections */
 .linkSection:nth-child(2) {
-    margin-right: 0.15%;
+	margin-right: 0.15%;
 }
 .linkSection:last-child {
-    margin-right: 39.84%;
+	margin-right: 39.84%;
 }
 .linkSection {
-    height: 100%; /* Full height of parent div */
-    width: 100%;
-    font: 1em "P4", sans-serif;
-    color: green;
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+	height: 100%; /* Full height of parent div */
+	width: 100%;
+	font: 1em "P4", sans-serif;
+	color: green;
+	box-sizing: border-box; /* Include padding and border in element's total width and height */
 
-    /* DEBUGGING: Green striped transluscent */
-    background: repeating-linear-gradient(
-        75deg,
-        rgba(0, 255, 0, 0),
-        rgba(0, 255, 0, 0) 1px,
-        rgba(0, 255, 0, 0.3) 2px,
-        rgba(0, 255, 0, 0.3) 3px
-    );
-    border: 1px solid green;
+	/* DEBUGGING: Green striped transluscent */
+	background: repeating-linear-gradient(
+		75deg,
+		rgba(0, 255, 0, 0),
+		rgba(0, 255, 0, 0) 1px,
+		rgba(0, 255, 0, 0.3) 2px,
+		rgba(0, 255, 0, 0.3) 3px
+	);
+	border: 1px solid green;
 }
 
 #headerContainer {
-    color: darkslategrey;
-    height: 20vh;
-    max-height: calc(100vw * (9 / 16) * (20 / 100)); /* 20% of the screen height @ 16:9 */
-    font-size: 5em;
-    font-family: "P4";
-    background-color: yellowgreen;
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-    position: relative;
+	color: darkslategrey;
+	height: 20vh;
+	max-height: calc(100vw * (9 / 16) * (20 / 100)); /* 20% of the screen height @ 16:9 */
+	font-size: 5em;
+	font-family: "P4";
+	background-color: yellowgreen;
+	box-sizing: border-box; /* Include padding and border in element's total width and height */
+	position: relative;
 }
 #headerStripes {
-    width: 100%;
-    height: 100%;
-    /* border: orangered solid 3px; */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-    position: absolute;
-    top: 0;
-    left: 0;
+	width: 100%;
+	height: 100%;
+	/* border: orangered solid 3px; */
+	box-sizing: border-box; /* Include padding and border in element's total width and height */
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 #headerBody {
-    position: absolute;
-    top: 0;
-    left: 50%; /* Start at the horizontal center of the parent */
-    transform: translateX(-50%); /* Adjust to center */
-    height: 100%; /* Full height of parent div */
-    width: 100vw;
-    max-width: calc(var(--ratio) * 100vh);
-    /* border: teal solid 3px; */
-    /* background-color: aqua; */
-    box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 50%; /* Start at the horizontal center of the parent */
+	transform: translateX(-50%); /* Adjust to center */
+	height: 100%; /* Full height of parent div */
+	width: 100vw;
+	max-width: calc(var(--ratio) * 100vh);
+	/* border: teal solid 3px; */
+	/* background-color: aqua; */
+	box-sizing: border-box;
 }
 #headerTitle {
-    border: orchid solid 3px;
-    position: absolute;
-    top: 0;
-    right: 20vw;
+	border: orchid solid 3px;
+	position: absolute;
+	top: 0;
+	right: 20vw;
 }
 #headerStar {
-    position: absolute;
-    /* Set at 0 with accounting for the center of the image */
-    top: -22px;
-    right: -16px;
-    /* transform: translate(50%, -50%); */
-    width: calc(var(--ratio) * 14vh);
-    max-width: 14vw;
-    max-height: calc(var(--inverseRatio) * 100vw);
-    animation: spin 11s linear infinite;
-    filter: drop-shadow(-1.5vw 2vh var(--starOrange));
+	position: absolute;
+	/* Set at 0 with accounting for the center of the image */
+	top: -22px;
+	right: -16px;
+	/* transform: translate(50%, -50%); */
+	width: calc(var(--ratio) * 14vh);
+	max-width: 14vw;
+	max-height: calc(var(--inverseRatio) * 100vw);
+	animation: spin 11s linear infinite;
+	filter: drop-shadow(-1.5vw 2vh var(--starOrange));
 
-    border: var(--starOrange) solid 3px;
+	border: var(--starOrange) solid 3px;
 }
 
 #bodyContainer {
-    position: absolute;
-    top: 0;
-    left: 50%; /* Start at the horizontal center of the parent */
-    transform: translateX(-50%); /* Adjust to center */
-    height: 100%; /* Full height of parent div */
-    width: 100vw;
-    max-width: calc(var(--ratio) * 100vh);
-    border: purple solid 3px;
-    box-sizing: border-box;
-    pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 50%; /* Start at the horizontal center of the parent */
+	transform: translateX(-50%); /* Adjust to center */
+	height: 100%; /* Full height of parent div */
+	width: 100vw;
+	max-width: calc(var(--ratio) * 100vh);
+	border: purple solid 3px;
+	box-sizing: border-box;
+	pointer-events: none;
 }
 
 /* only displays on large viewports */
 @media (min-width: 800px) {
-    /* TODO: Look into setting these as relative positionings to screen size, as we are no doubt looking at different placements due to resolution */
-    /* TODO: is aligning these sprites correctly a good use of time? */
-    #hero {
-        position: absolute;
-        bottom: -9.8vh;
-        right: -8.2vw;
-        max-width: calc(var(--ratio) * 53vh);
-        height: 93vh;
-        max-height: calc(var(--inverseRatio) * 100vw);
-        filter: drop-shadow(-3vw 6vh var(--softBlack));
-    }
+	/* TODO: Look into setting these as relative positionings to screen size, as we are no doubt looking at different placements due to resolution */
+	/* TODO: is aligning these sprites correctly a good use of time? */
+	#hero {
+		position: absolute;
+		bottom: -9.8vh;
+		right: -8.2vw;
+		max-width: calc(var(--ratio) * 53vh);
+		height: 93vh;
+		max-height: calc(var(--inverseRatio) * 100vw);
+		filter: drop-shadow(-3vw 6vh var(--softBlack));
+	}
 }
 
 /* DEBUGGING: */
 /* ingame screenshot overlaid on top of website */
 #debugImage {
-    position: absolute;
-    bottom: 0; /* Anchor to the bottom of the page */
-    left: 50%; /* Start at the center horizontally */
-    transform: translateX(-50%); /* Adjust to center */
-    max-width: calc((var(--ratio)) * 100vh); /* Full width */
-    max-height: calc(var(--inverseRatio) * 100vw); /* Full height */
-    pointer-events: none;
-    opacity: 0.2;
-    z-index: 9998;
-    display: none; /* Initially hidden */
+	position: absolute;
+	bottom: 0; /* Anchor to the bottom of the page */
+	left: 50%; /* Start at the center horizontally */
+	transform: translateX(-50%); /* Adjust to center */
+	max-width: calc((var(--ratio)) * 100vh); /* Full width */
+	max-height: calc(var(--inverseRatio) * 100vw); /* Full height */
+	pointer-events: none;
+	opacity: 0.2;
+	z-index: 9998;
+	display: none; /* Initially hidden */
 }
 #debugCheckBox {
-    position: absolute;
-    top: 1%;
-    left: 1%;
-    z-index: 9999;
-    border-radius: 50%;
-    width: 2em;
-    height: 2em;
-    border: 3px solid var(--starOrange);
-    cursor: pointer;
-    opacity: 0.3; /* Initially hidden */
-    transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transition for visibility and background color */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance: none;
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	z-index: 9999;
+	border-radius: 50%;
+	width: 2em;
+	height: 2em;
+	border: 3px solid var(--starOrange);
+	cursor: pointer;
+	opacity: 0.3; /* Initially hidden */
+	transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transition for visibility and background color */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
 }
 #debugCheckBox:hover,
 #debugCheckBox:active {
-    opacity: 1; /* Fully visible when hovered or clicked */
-    background-color: var(--starYellow); /* Accent color for the checkbox */
+	opacity: 1; /* Fully visible when hovered or clicked */
+	background-color: var(--starYellow); /* Accent color for the checkbox */
 }
 
 #debugCheckBox:checked {
-    background-color: var(--starOrange); /* Fill background with starOrange when checked */
-    opacity: 1; /* Fully visible when checked */
+	background-color: var(--starOrange); /* Fill background with starOrange when checked */
+	opacity: 1; /* Fully visible when checked */
 }
 
 #debugCheckBox:checked ~ #debugImage {
-    display: block; /* Show the image when the checkbox is checked */
+	display: block; /* Show the image when the checkbox is checked */
 }
 #debugDesc {
-    position: absolute;
-    top: 1%;
-    left: 5%;
-    z-index: 9999;
+	position: absolute;
+	top: 1%;
+	left: 5%;
+	z-index: 9999;
 }
 #muteButton {
 	position: absolute;
@@ -256,17 +256,17 @@ body {
 
 /* hide content */
 @media (max-width: 1080px) {
-    #hero,
-    #headerStar {
-        display: none; /* Hide elements completely */
-    }
+	#hero,
+	#headerStar {
+		display: none; /* Hide elements completely */
+	}
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }

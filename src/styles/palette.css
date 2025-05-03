@@ -1,18 +1,18 @@
 /* File for variables that will see common reuse */
 @font-face {
-    font-family: "P4";
-    src: url("../assets/fonts/Fontsona4Golden.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+	font-family: "P4";
+	src: url("../assets/fonts/Fontsona4Golden.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
 }
 
 :root {
-    --linkSize: 13; /* The standard height for each link row */
-    /* TODO: Adapt the size of the rows to screen resolution or at least to be relative to protag bust image for consistency */
-    --ratio: 16 / 9; /* The ratio of the screen width to height */
-    --inverseRatio: 9 / 16; /* The ratio of the screen height to width */
-    --starYellow: #fdfe7e;
-    --starOrange: #ffa300;
-    --softBlack: #252525; /* Used for shadow and highlighted link */
-    --boldOrange: #f67b00; /* Used for linkCenter and linkRight */
+	--linkSize: 13; /* The standard height for each link row */
+	/* TODO: Adapt the size of the rows to screen resolution or at least to be relative to protag bust image for consistency */
+	--ratio: 16 / 9; /* The ratio of the screen width to height */
+	--inverseRatio: 9 / 16; /* The ratio of the screen height to width */
+	--starYellow: #fdfe7e;
+	--starOrange: #ffa300;
+	--softBlack: #252525; /* Used for shadow and highlighted link */
+	--boldOrange: #f67b00; /* Used for linkCenter and linkRight */
 }
