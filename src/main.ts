@@ -30,6 +30,28 @@ let linkData: SocialLinkData[] = [
     { arcana: "Aeon", name: "Marie", rank: 1, hidden: true },
 ];
 
+// gets cookies' values when you feed the cookie's name (key)
+// will be used to get the values of the social links, mute button and the debug image
+function getCookie(cname: string) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(";");
+
+    // for cook in cookies
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+
+        while (c.charAt(0) == " ") {
+            c = c.substring(1);
+        }
+
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
 // Get the app element
 const linkContainer = document.getElementById("linkContainer");
 
@@ -43,11 +65,11 @@ if (linkContainer) {
 
 // has to start as true because browser autoplay restrictions are a thing
 let mute = true;
-
 const muteButton = document.getElementById("muteButton");
+
 if (muteButton) {
     muteButton.addEventListener("click", () => {
-        mute = !mute; // Toggle the mute state
+        mute = !mute;
     });
 }
 
