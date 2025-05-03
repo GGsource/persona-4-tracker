@@ -134,27 +134,27 @@ body {
 }
 #headerStar {
 	position: absolute;
-	/* Set at 0 with accounting for the center of the image */
-	top: -22px;
-	right: -16px;
-	/* transform: translate(50%, -50%); */
+	top: -2.25%;
+	right: -0.9%;
 	width: calc(var(--ratio) * 14vh);
 	max-width: 14vw;
 	max-height: calc(var(--inverseRatio) * 100vw);
 	animation: spin 11s linear infinite;
-	filter: drop-shadow(-1.5vw 2vh var(--starOrange));
+	/* TODO: CANNOT USE % FOR DROP SHADOW. this complicates things. maybe use a separate image after all? */
+	filter: drop-shadow(-16px 16px var(--starOrange));
 
 	border: var(--starOrange) solid 3px;
 }
 
 #bodyContainer {
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	left: 50%; /* Start at the horizontal center of the parent */
 	transform: translateX(-50%); /* Adjust to center */
 	height: 100%; /* Full height of parent div */
 	width: 100vw;
 	max-width: calc(var(--ratio) * 100vh);
+	max-height: calc(var(--inverseRatio) * 100vw);
 	border: purple solid 3px;
 	box-sizing: border-box;
 	pointer-events: none;
@@ -162,16 +162,15 @@ body {
 
 /* only displays on large viewports */
 @media (min-width: 800px) {
-	/* TODO: Look into setting these as relative positionings to screen size, as we are no doubt looking at different placements due to resolution */
-	/* TODO: is aligning these sprites correctly a good use of time? */
 	#hero {
 		position: absolute;
-		bottom: -9.8vh;
-		right: -8.2vw;
+		bottom: -10%;
+		right: -9.3%;
 		max-width: calc(var(--ratio) * 53vh);
-		height: 93vh;
+		height: 95%;
 		max-height: calc(var(--inverseRatio) * 100vw);
-		filter: drop-shadow(-3vw 6vh var(--softBlack));
+		/* TODO: CANNOT USE % FOR DROP SHADOW. this complicates things. maybe use a separate image after all? */
+		filter: drop-shadow(-37px 38px var(--softBlack));
 	}
 }
 
