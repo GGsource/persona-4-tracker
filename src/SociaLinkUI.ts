@@ -26,10 +26,10 @@ export class SocialLinkUI {
 		linkCenter.className = "linkSection linkCenter";
 		linkCenter.innerHTML = "B";
 		linkCenter.style.flex = "28.1"; // fractions of the space
-		// Create a child div for linkCenter
+		// Arcana name child for linkCenter
 		let linkCenterArcana = document.createElement("div");
 		linkCenterArcana.className = "linkCenterArcana";
-		linkCenterArcana.innerHTML = "Fool"; // Replace with your content
+		linkCenterArcana.innerHTML = "Fool";
 
 		// TODO: Insert the rank and the arcana below it inside linkCenter
 		let linkUIRight = document.createElement("div");

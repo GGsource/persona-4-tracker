@@ -33,7 +33,7 @@ body {
 	max-height: calc(100vw * (9 / 16) * (var(--linkSize) / 100));
 	width: 100%;
 	margin: 0 0 0.35% 0;
-	background-color: var(--starYellow);
+	/*background-color: var(--starYellow);*/
 
 	/* DEBUGGING: to be visible prior to any actual styling */
 	/* background: repeating-linear-gradient(
@@ -147,19 +147,6 @@ body {
 	top: 0;
 	right: 20vw;
 }
-#headerStar {
-	position: absolute;
-	top: -1.75%;
-	right: -0.65%;
-	width: calc(var(--ratio) * 14vh);
-	max-width: 14vw;
-	max-height: calc(var(--inverseRatio) * 100vw);
-	/* animation: spin 11s linear infinite; */
-	/* TODO: CANNOT USE % FOR DROP SHADOW. this complicates things. maybe use a separate image after all? */
-	filter: drop-shadow(-25px 25px var(--starOrange));
-	z-index: 10;
-}
-
 #bodyContainer {
 	position: absolute;
 	bottom: 0;
@@ -185,12 +172,29 @@ body {
 		height: 95%;
 		max-height: calc(var(--inverseRatio) * 100vw);
 	}
-	#hero {
+	#hero,
+	#headerStar {
 		z-index: 2;
 	}
 	#shadow {
 		transform: translate(-5.6%, 5.8%);
 		z-index: 1;
+	}
+
+	#headerStar,
+	#headerStarShadow {
+		position: absolute;
+		top: -1.65%;
+		right: -0.65%;
+		width: calc(var(--ratio) * 14vh);
+		max-width: 14vw;
+		max-height: calc(var(--inverseRatio) * 100vw);
+		/* i LOVE being commented out. i love not being displayed. (cant use translate and animation at the same time, this is not the way)*/
+		/*animation: spin 11s linear infinite;*/
+	}
+	#headerStarShadow {
+		z-index: 1;
+		transform: translate(-7.3%, 7%);
 	}
 }
 
@@ -204,7 +208,7 @@ body {
 	max-width: calc((var(--ratio)) * 100vh); /* Full width */
 	max-height: calc(var(--inverseRatio) * 100vw); /* Full height */
 	pointer-events: none;
-	opacity: 0.2;
+	opacity: 0.6;
 	z-index: 9998;
 	display: none; /* Initially hidden */
 }
