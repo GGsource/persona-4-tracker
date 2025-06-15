@@ -15,15 +15,22 @@ export class SocialLinkUI {
 		linkUIFull.className = "linkFull";
 		let linkUIBody = document.createElement("div");
 		linkUIBody.className = "linkBody";
+
 		let linkUILeft = document.createElement("div");
 		linkUILeft.className = "linkSection linkLeft";
 		linkUILeft.innerHTML = "A";
 		linkUILeft.style.flex = "9.8"; // fractions of the space
+
 		// TODO: Turn linkleft into the full card using multiple divs
 		let linkCenter = document.createElement("div");
 		linkCenter.className = "linkSection linkCenter";
 		linkCenter.innerHTML = "B";
 		linkCenter.style.flex = "28.1"; // fractions of the space
+		// Create a child div for linkCenter
+		let linkCenterArcana = document.createElement("div");
+		linkCenterArcana.className = "linkCenterArcana";
+		linkCenterArcana.innerHTML = "Fool"; // Replace with your content
+
 		// TODO: Insert the rank and the arcana below it inside linkCenter
 		let linkUIRight = document.createElement("div");
 		linkUIRight.className = "linkSection linkRight";
@@ -37,6 +44,10 @@ export class SocialLinkUI {
 		linkUIBody.appendChild(linkUILeft);
 		linkUIBody.appendChild(linkCenter);
 		linkUIBody.appendChild(linkUIRight);
+
+		// children
+		linkCenter.appendChild(linkCenterArcana);
+
 		// Attach the body to the full row
 		linkUIFull.appendChild(linkUIBody);
 
