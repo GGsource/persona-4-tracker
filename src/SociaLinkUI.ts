@@ -29,7 +29,7 @@ export class SocialLinkUI {
 		// Arcana name child for linkCenter
 		let linkCenterArcana = document.createElement("div");
 		linkCenterArcana.className = "linkCenterArcana";
-		linkCenterArcana.innerHTML = "Fool";
+		linkCenterArcana.innerHTML = arcana;
 
 		// TODO: Insert the rank and the arcana below it inside linkCenter
 		let linkUIRight = document.createElement("div");
