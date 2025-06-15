@@ -1,5 +1,6 @@
 import { SocialLinkData } from "./SocialLinkData";
 import { SocialLinkUI } from "./SociaLinkUI";
+export let mute = false;
 
 // Initial Social Link Information stored in an Object
 let linkData: SocialLinkData[] = [
@@ -54,17 +55,46 @@ function getCookie(cname: string) {
 
 // Get the app element
 const linkContainer = document.getElementById("linkContainer");
+const SLICE_SIZE = 5;
+let startIndex = 0;
 
-if (linkContainer) {
-	linkData.forEach((element) => {
-		// Make the new SocialLinkUI object from the data
+function renderSlice() {
+	if (!linkContainer) return;
+	// Clear previous content
+	linkContainer.innerHTML = "";
+
+	// Slice the data based on the current startIndex and SLICE_SIZE
+	const slice = linkData.slice(startIndex, startIndex + SLICE_SIZE);
+	slice.forEach((element) => {
 		let newLink = new SocialLinkUI(element.arcana, element.name, element.rank, element.hidden);
 		linkContainer.appendChild(newLink.getUI());
 	});
 }
 
+// Listen for scroll events on the container
+if (linkContainer) {
+	linkContainer.addEventListener("wheel", (event) => {
+		// checks direction of scroll and updates accordingly (1 for up, -1 for down)
+		const direction = event.deltaY > 0 ? 1 : -1;
+		const maxIndex = Math.max(0, linkData.length - SLICE_SIZE);
+		startIndex += direction;
+		// Wrap to start
+		if (startIndex > maxIndex) {
+			startIndex = 0;
+
+			// Wrap to end
+		} else if (startIndex < 0) {
+			startIndex = maxIndex;
+		}
+		renderSlice();
+	});
+
+	// Initial render
+	renderSlice();
+}
+
 // has to start as true because browser autoplay restrictions are a thing
-let mute = true;
+mute = true;
 const muteButton = document.getElementById("muteButton");
 
 if (muteButton) {

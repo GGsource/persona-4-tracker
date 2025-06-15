@@ -1,3 +1,5 @@
+import { mute } from "./main";
+
 // SocialLinkUI Class that represents a Social Link UI element
 export class SocialLinkUI {
 	// Contains the state of only the information that can be changed
@@ -50,6 +52,14 @@ export class SocialLinkUI {
 
 		// Attach the body to the full row
 		linkUIFull.appendChild(linkUIBody);
+
+		linkUIFull.addEventListener("mouseenter", () => {
+			if (!mute) {
+				// doesnt actually mute again if its not passed globally
+				const hoversfx = new Audio("src/assets/sfx/optionselect.mp3");
+				hoversfx.play();
+			}
+		});
 
 		// Attach the UI we've created to the class
 		this.linkUI = linkUIFull;
