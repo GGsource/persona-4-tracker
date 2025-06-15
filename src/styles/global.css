@@ -166,10 +166,10 @@ body {
 	#hero,
 	#shadow {
 		position: absolute;
-		bottom: -10%;
-		right: -9.3%;
+		bottom: -10.7%;
+		right: -9.1%;
 		max-width: calc(var(--ratio) * 53vh);
-		height: 95%;
+		height: 95.8%;
 		max-height: calc(var(--inverseRatio) * 100vw);
 	}
 	#hero,
@@ -177,7 +177,7 @@ body {
 		z-index: 2;
 	}
 	#shadow {
-		transform: translate(-5.6%, 5.8%);
+		transform: translate(-5.6%, 5.6%);
 		z-index: 1;
 	}
 
