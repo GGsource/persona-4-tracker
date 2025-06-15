@@ -173,19 +173,26 @@ body {
 	border: purple solid 3px;
 	box-sizing: border-box;
 	pointer-events: none;
+	overflow: hidden;
 }
 
 /* only displays on large viewports */
 @media (min-width: 800px) {
-	#hero {
+	#hero,
+	#shadow {
 		position: absolute;
 		bottom: -10%;
 		right: -9.3%;
 		max-width: calc(var(--ratio) * 53vh);
 		height: 95%;
 		max-height: calc(var(--inverseRatio) * 100vw);
-		/* TODO: CANNOT USE % FOR DROP SHADOW. this complicates things. maybe use a separate image after all? */
-		filter: drop-shadow(-37px 38px var(--softBlack));
+	}
+	#hero {
+		z-index: 2;
+	}
+	#shadow {
+		transform: translate(-5.6%, 5.8%);
+		z-index: 1;
 	}
 }
 
@@ -270,7 +277,7 @@ body {
 
 /* hide content */
 @media (max-width: 1080px) {
-	#hero,
+	.protag,
 	#headerStar {
 		display: none; /* Hide elements completely */
 	}
