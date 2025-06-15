@@ -149,12 +149,12 @@ body {
 }
 #headerStar {
 	position: absolute;
-	top: -1.95%;
-	right: -0.76%;
+	top: -1.75%;
+	right: -0.65%;
 	width: calc(var(--ratio) * 14vh);
 	max-width: 14vw;
 	max-height: calc(var(--inverseRatio) * 100vw);
-	animation: spin 11s linear infinite;
+	/* animation: spin 11s linear infinite; */
 	/* TODO: CANNOT USE % FOR DROP SHADOW. this complicates things. maybe use a separate image after all? */
 	filter: drop-shadow(-25px 25px var(--starOrange));
 	z-index: 10;
