@@ -248,6 +248,7 @@ body {
 	z-index: 9999;
 }
 #muteButton {
+	top: 5%;
 	border-color: olivedrab;
 }
 #muteButton:hover,
