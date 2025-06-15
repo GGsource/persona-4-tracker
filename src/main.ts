@@ -103,19 +103,6 @@ if (muteButton) {
 	});
 }
 
-// Gets all the elements with the *class* "linkFull" and adds a mouseenter event listener to each of them
-const allLinks = document.querySelectorAll(".linkFull");
-
-// TODO: Integrate this into the sociallink class so that events are added upon creation of class instance
-allLinks.forEach((linkFull) => {
-	linkFull.addEventListener("mouseenter", () => {
-		if (!mute) {
-			const hoversfx = new Audio("src/assets/sfx/optionselect.mp3");
-			hoversfx.play();
-		}
-	});
-});
-
 // Get the viewport dimensions and print them out
 const debugDescription = document.getElementById("debugDesc");
 if (debugDescription) {
