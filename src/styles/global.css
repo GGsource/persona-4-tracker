@@ -173,7 +173,6 @@ body {
 	border: purple solid 3px;
 	box-sizing: border-box;
 	pointer-events: none;
-	overflow: hidden;
 }
 
 /* only displays on large viewports */
@@ -210,7 +209,8 @@ body {
 	z-index: 9998;
 	display: none; /* Initially hidden */
 }
-#debugCheckBox {
+#debugCheckBox,
+#muteButton {
 	position: absolute;
 	top: 1%;
 	left: 1%;
@@ -248,21 +248,7 @@ body {
 	z-index: 9999;
 }
 #muteButton {
-	position: absolute;
-	top: 5%;
-	left: 1%;
-	z-index: 9999;
-	border-radius: 50%;
-	width: 2em;
-	height: 2em;
-	border: 3px solid olivedrab;
-	cursor: pointer;
-	opacity: 0.3; /* Initially hidden */
-	transition: opacity 0.3s ease, background-color 0.3s ease; /* Smooth transition for visibility and background color */
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	-o-appearance: none;
-	appearance: none;
+	border-color: olivedrab;
 }
 #muteButton:hover,
 #muteButton:active {
