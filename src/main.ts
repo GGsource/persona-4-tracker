@@ -55,12 +55,23 @@ function getCookie(cname: string) {
 // Get the app element
 const linkContainer = document.getElementById("linkContainer");
 
+// Listen for scroll events on the container
 if (linkContainer) {
 	linkData.forEach((element) => {
 		// Make the new SocialLinkUI object from the data
 		let newLink = new SocialLinkUI(element.arcana, element.name, element.rank, element.hidden);
 		linkContainer.appendChild(newLink.getUI());
 	});
+
+	linkContainer.onscroll = (event) => ScrollLinkList(event);
+
+	let lastScrollTop = linkContainer.scrollTop;
+	let lastScrollTime = 0;
+
+	// ScrollLinkList - Instant Snapping Scrolling between list items
+	function ScrollLinkList(evt: Event) {
+		console.log("You tried to scroll!");
+	}
 }
 
 // has to start as true because browser autoplay restrictions are a thing
